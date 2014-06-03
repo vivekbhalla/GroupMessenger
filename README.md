@@ -18,14 +18,14 @@ Only two methods insert() and query() are implemented currently.
 Since the column names are “key” and “value”, any app should be able to 
 insert a <key, value> pair as in the following example:
 
-    'ContentValues keyValueToInsert = new ContentValues();
+    ContentValues keyValueToInsert = new ContentValues();
     // inserting <”key-to-insert”, “value-to-insert”>
     keyValueToInsert.put(“key”, “key-to-insert”);
     keyValueToInsert.put(“value”, “value-to-insert”);
     Uri newUri = getContentResolver().insert(
         providerUri,    // assume we already created a Uri object with our provider URI
         keyValueToInsert
-    );'
+    );
 
 If there’s a new value inserted using an existing key, we keep only the most recent value.
 History of values under the same key is not preserved, its overwritten.
@@ -34,13 +34,13 @@ Similarly, any app can read a <key, value> pair from the provider with query().
 
 Provider can answer queries as in the following example:
 
-    'Cursor resultCursor = getContentResolver().query(
+    Cursor resultCursor = getContentResolver().query(
         providerUri,    // assume we already created a Uri object with our provider URI
         null,                // no need to support the projection parameter
         “key-to-read”,    // we provide the key directly as the selection parameter
         null,                // no need to support the selectionArgs parameter
         null                 // no need to support the sortOrder parameter
-    );'
+    );
 
 The app multicasts every user-entered message to all app instances (including the one that is sending the message). 
 The app uses B-multicast.
