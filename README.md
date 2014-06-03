@@ -8,7 +8,7 @@ This is a group messenger application that preserves total ordering as well as c
 In addition, it implements a key-value table that each device uses to individually store all messages on its
 local storage.
 
-    The provider has two columns.
+The provider has two columns.
     
 1.	The first column is “key”. This column is used to store all keys.
 2.	The second column is “value”. This column is used to store all values.
@@ -49,9 +49,9 @@ The algorithm in the application provides a total-causal ordering.
 The app opens one server socket that listens on 10000.
 Use the python scripts to create, run and set the ports of the AVD’s, by using the following commands 
 
-  * python create_avd.py 5
-  * python run_avd.py 5
-  * python set_redir.py 10000
+    python create_avd.py 5
+    python run_avd.py 5
+    python set_redir.py 10000
 
 The redirection ports for the AVD’s will be-
 
