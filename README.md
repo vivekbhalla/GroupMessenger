@@ -69,3 +69,7 @@ the value should is the actual message (again, as a string).
 
 The delivery sequence number starts from 0 and increase by 1 for each message.
  
+There is a tester for checking if everything is working properly.
+
+
+**Note:** The python scripts and tester are provided by [Prof. Steve Ko](http://www.cse.buffalo.edu/people/?u=stevko) from the University at Buffalo.
